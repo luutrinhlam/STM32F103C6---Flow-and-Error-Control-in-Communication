@@ -1,0 +1,2 @@
+timer.c:21:6:setTimerResend	16	static
+timer.c:26:6:timer_run	4	static

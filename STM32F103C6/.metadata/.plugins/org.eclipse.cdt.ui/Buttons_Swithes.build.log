@@ -1,0 +1,10 @@
+01:37:02 **** Incremental Build of configuration Debug for project Buttons_Swithes ****
+make -j4 all 
+arm-none-eabi-size   Buttons_Swithes.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10156	    160	   1696	  12012	   2eec	Buttons_Swithes.elf
+Finished building: default.size.stdout
+ 
+
+01:37:03 Build Finished. 0 errors, 0 warnings. (took 602ms)
+

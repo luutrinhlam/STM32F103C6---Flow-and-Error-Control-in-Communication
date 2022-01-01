@@ -1,0 +1,23 @@
+10:54:25 **** Incremental Build of configuration Debug for project Cooperative_Scheduler ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/scheduler.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/scheduler.d" -MT"Core/Src/scheduler.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/scheduler.o"
+arm-none-eabi-gcc -o "Cooperative_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Admin\Desktop\Study stuff\Homework\211\VXL\LAB4-git\STM32F103C6\Cooperative_Scheduler\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cooperative_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cooperative_Scheduler.elf
+ 
+arm-none-eabi-size   Cooperative_Scheduler.elf 
+arm-none-eabi-objdump -h -S  Cooperative_Scheduler.elf  > "Cooperative_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex  Cooperative_Scheduler.elf  "Cooperative_Scheduler.hex"
+arm-none-eabi-objcopy  -O binary  Cooperative_Scheduler.elf  "Cooperative_Scheduler.bin"
+   text	   data	    bss	    dec	    hex	filename
+  11268	     20	   1916	  13204	   3394	Cooperative_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cooperative_Scheduler.hex
+Finished building: Cooperative_Scheduler.bin
+ 
+ 
+Finished building: Cooperative_Scheduler.list
+ 
+
+10:54:28 Build Finished. 0 errors, 0 warnings. (took 2s.719ms)
+
